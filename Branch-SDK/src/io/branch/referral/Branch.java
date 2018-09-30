@@ -2851,7 +2851,7 @@ public class Branch implements BranchViewHandler.IBranchViewEvents, SystemObserv
                                     ((ServerRequestCreateUrl) thisReq_).handleDuplicateURLError();
                                 } else {
                                     Log.i("BranchSDK", "Branch API Error: Conflicting resource error code from API");
-                                    handleFailure(0, status);
+                                    handleFailure(thisReq_, status);
                                 }
                             }
                             //On Network error or Branch is down fail all the pending requests in the queue except
